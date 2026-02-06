@@ -20,7 +20,7 @@ export default function ProfessionalContact() {
   };
 
   return (
-    <section className="py-24 px-6 lg:px-24 bg-[#050505] relative overflow-hidden">
+    <section className="py-24 px-6 lg:px-24 relative overflow-hidden">
       {/* Background Blur Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 

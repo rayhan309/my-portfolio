@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-32 bg-[#050505] px-6 lg:px-24 relative overflow-hidden">
+    <section className="py-32 px-6 lg:px-24 relative overflow-hidden">
       <div className=" container mx-auto">
         
         {/* Header */}
@@ -67,7 +67,7 @@ export default function Services() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="p-10 rounded-[2.5rem] bg-[#0c0c0c] border border-white/5 group relative overflow-hidden transition-all hover:border-blue-500/50"
+              className="p-10 rounded-[2.5rem] glass-card border border-white/5 group relative overflow-hidden transition-all hover:border-blue-500/50"
             >
               {/* Decorative Gradient on Hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

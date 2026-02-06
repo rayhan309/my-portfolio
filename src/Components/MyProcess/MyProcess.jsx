@@ -37,7 +37,7 @@ const steps = [
 
 export default function MyProcess() {
   return (
-    <section className="py-32 bg-[#080808] px-6 lg:px-24">
+    <section className="py-32 px-6 lg:px-24">
       <div className="container mx-auto">
         <div className="text-center mb-20">
           <motion.h2 
@@ -60,7 +60,7 @@ export default function MyProcess() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="p-8 rounded-[2.5rem] bg-[#0c0c0c] border border-white/5 flex flex-col items-center text-center group"
+              className="p-8 rounded-[2.5rem] glass-card border border-white/5 flex flex-col items-center text-center group"
             >
               <div className="mb-6 text-gray-500 font-mono text-2xl group-hover:text-blue-500 transition-colors">
                 {step.id}

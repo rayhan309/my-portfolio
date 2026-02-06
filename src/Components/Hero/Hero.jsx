@@ -2,10 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <section className="h-screen flex flex-col justify-center px-6 lg:px-24 relative overflow-hidden bg-[#050505]">
+        <section className="h-screen flex flex-col border-b-2 border-primary/10 justify-center px-6 lg:px-24 relative overflow-hidden">
             {/* Background Decorative Glow */}
             <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-600/10 blur-[130px] rounded-full" />
             <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-purple-600/10 blur-[110px] rounded-full" />
@@ -16,7 +17,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-blue-400 text-xs font-mono tracking-widest mb-8 uppercase"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-primary text-xs font-mono tracking-widest mb-8 uppercase"
                 >
                     <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -34,9 +35,9 @@ export default function HeroSection() {
                     <h1 className="text-gray-500 text-lg md:text-2xl font-medium mb-2 tracking-tight">
                         I'm <span className="text-white">Abu Rayhan</span> —
                     </h1>
-                    <h2 className="text-6xl md:text-[8.5rem] font-black leading-[0.85] tracking-tighter italic">
+                    <h2 className="text-6xl md:text-[8.5rem] text-primary font-black leading-[0.85] tracking-tighter italic">
                         DIGITAL <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-200 to-purple-500">
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-blue-200 to-secondary">
                             CRAFTSMAN.
                         </span>
                     </h2>
@@ -59,14 +60,15 @@ export default function HeroSection() {
                     transition={{ delay: 0.8 }}
                     className="mt-12 flex flex-wrap gap-6 items-center"
                 >
-                    <button className="group bg-white text-black px-10 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <button className="group bg-white text-black px-10 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-primary cursor-pointer hover:text-white transition-all duration-300">
                         আমার কাজ দেখুন <ArrowUpRight size={20} className="group-hover:rotate-45 transition-transform" />
                     </button>
 
                     <div className="flex gap-5 border-l border-white/10 pl-6 items-center">
-                        <a href="#" className="text-gray-500 hover:text-blue-500 transition-colors"><Github size={24} /></a>
-                        <a href="#" className="text-gray-500 hover:text-blue-500 transition-colors"><Linkedin size={24} /></a>
-                        <a href="mailto:abu.rayhan@email.com" className="text-gray-500 hover:text-blue-500 transition-colors"><Mail size={24} /></a>
+                        <Link href="https://github.com/rayhan309" target="_blank" className="text-gray-500 hover:text-blue-500 transition-colors"><Github size={24} /></Link>
+                        <Link href="https://www.linkedin.com/in/abu-rayhan-undefined-2514b5390/" 
+                        target="_blank" className="text-gray-500 hover:text-blue-500 transition-colors"><Linkedin size={24} /></Link>
+                        <Link href="mailto:ihaveawonderfull@email.com"className="text-gray-500 hover:text-blue-500 transition-colors"><Mail size={24} /></Link>
                     </div>
                 </motion.div>
             </div>

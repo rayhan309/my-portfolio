@@ -60,7 +60,7 @@ export default function ProjectSection() {
   const visibleProjects = showAll ? allProjects : allProjects.slice(0, 3);
 
   return (
-    <section className="py-32 bg-[#050505] px-6 lg:px-24">
+    <section className="py-32 px-6 lg:px-24">
       <div className="container mx-auto">
         
         {/* Header */}

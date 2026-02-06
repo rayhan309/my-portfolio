@@ -24,7 +24,7 @@ export default function FixedPortfolio() {
 
 
   return (
-    <div className="bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white selection:bg-blue-500/30">
+    <div className="text-primary">
 
       {/* Hero Section */}
     <HeroSection />
@@ -40,7 +40,7 @@ export default function FixedPortfolio() {
 
       {/* --- Horizontal Scroll Section Start --- */}
       {/* sticky container এর হাইট বাড়ানো হয়েছে যাতে স্ক্রল করার জায়গা পাওয়া যায় */}
-      <section ref={scrollRef} className="relative h-[250vh] bg-[#080808]">
+      <section ref={scrollRef} className="relative h-[250vh]">
         <div className="sticky top-0 h-screen flex items-center overflow-hidden">
           <motion.div style={{ x }} className="flex gap-10 px-6 lg:px-24">
 
@@ -98,7 +98,7 @@ export default function FixedPortfolio() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-10 rounded-[2rem] bg-[#111] border border-white/5 md:col-span-2">
             <Layers className="text-blue-500 mb-6" />
-            <h3 className="text-3xl font-bold mb-4">Frontend Architecture</h3>
+            <h3 className="text-3xl text-primary font-bold mb-4">Frontend Architecture</h3>
             <p className="text-gray-500">React এবং Next.js এর মাধ্যমে আমি হাই-পারফরম্যান্স ফ্রন্টএন্ড তৈরি করি।</p>
           </div>
           <div className="p-10 rounded-[2rem] bg-blue-600 text-white flex flex-col justify-center items-center text-center">

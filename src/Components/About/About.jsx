@@ -26,14 +26,14 @@ const milestones = [
 
 export default function AboutStory() {
   return (
-    <section id="about" className="py-24 bg-[#050505] px-6 lg:px-24 relative">
+    <section id="about" className="py-24 px-6 lg:px-24 relative">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-blue-500 font-mono text-sm tracking-widest uppercase mb-4">// My Journey</h2>
+            <h2 className="text-primary font-mono text-sm tracking-widest uppercase mb-4">// My Journey</h2>
             <h3 className="text-5xl md:text-7xl font-black tracking-tighter italic uppercase">
-              Beyond the <span className="text-white/20">Pixels.</span>
+              Beyond the <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-blue-200 to-secondary">Pixels.</span>
             </h3>
           </div>
           <div className="text-gray-500 font-mono text-xs uppercase hidden md:block tracking-widest leading-loose">
@@ -42,7 +42,7 @@ export default function AboutStory() {
         </div>
 
         {/* Story Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-22 items-start">
           {/* Left Side: Bio */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
