@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <section className="h-screen flex flex-col border-b-2 border-primary/10 justify-center px-6 lg:px-24 relative overflow-hidden">
+        <section className="md:h-screen h-[80vh] flex flex-col border-b-2 border-primary/10 justify-center px-6 lg:px-24 relative overflow-hidden">
             {/* Background Decorative Glow */}
             <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-600/10 blur-[130px] rounded-full" />
             <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-purple-600/10 blur-[110px] rounded-full" />
@@ -35,7 +35,7 @@ export default function HeroSection() {
                     <h1 className="text-gray-500 text-lg md:text-2xl font-medium mb-2 tracking-tight">
                         I'm <span className="text-white">Abu Rayhan</span> —
                     </h1>
-                    <h2 className="text-6xl md:text-[8.5rem] text-primary font-black leading-[0.85] tracking-tighter italic">
+                    <h2 className="text-5xl md:text-6xl lg:text-[8.5rem] text-primary font-black leading-[0.85] tracking-tighter italic">
                         DIGITAL <br />
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-blue-200 to-secondary">
                             CRAFTSMAN.
@@ -60,15 +60,30 @@ export default function HeroSection() {
                     transition={{ delay: 0.8 }}
                     className="mt-12 flex flex-wrap gap-6 items-center"
                 >
-                    <button className="group bg-white text-black px-10 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-primary cursor-pointer hover:text-white transition-all duration-300">
+                    <button className="group bg-white text-black md:px-10 px-6 md:py-4 py-2 rounded-2xl font-bold flex items-center gap-2 hover:bg-primary cursor-pointer hover:text-white transition-all duration-300">
                         আমার কাজ দেখুন <ArrowUpRight size={20} className="group-hover:rotate-45 transition-transform" />
                     </button>
 
                     <div className="flex gap-5 border-l border-white/10 pl-6 items-center">
                         <Link href="https://github.com/rayhan309" target="_blank" className="text-gray-500 hover:text-blue-500 transition-colors"><Github size={24} /></Link>
-                        <Link href="https://www.linkedin.com/in/abu-rayhan-undefined-2514b5390/" 
-                        target="_blank" className="text-gray-500 hover:text-blue-500 transition-colors"><Linkedin size={24} /></Link>
-                        <Link href="mailto:ihaveawonderfull@email.com"className="text-gray-500 hover:text-blue-500 transition-colors"><Mail size={24} /></Link>
+                        <Link href="https://www.linkedin.com/in/abu-rayhan-undefined-2514b5390/"
+                            target="_blank" className="text-gray-500 hover:text-blue-500 transition-colors"><Linkedin size={24} /></Link>
+                        {/* <Link
+                            href="mailto:ihaveawonderfull@gmail.com"
+                            target="_blank"
+                            className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
+                            title="ইমেইল করুন"
+                        >
+                            <Mail size={24} />
+                        </Link> */}
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=ihaveawonderfull@email.com"
+                            target="_blank"
+                            className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
+                            title="ইমেইল করুন"
+                        >
+                            <Mail size={24} />
+                        </a>
                     </div>
                 </motion.div>
             </div>
