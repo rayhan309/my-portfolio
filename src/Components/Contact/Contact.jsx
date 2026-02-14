@@ -25,9 +25,9 @@ export default function ProfessionalContact() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className=" container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
+
         {/* Left Side: Info */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -38,7 +38,7 @@ export default function ProfessionalContact() {
           <p className="text-gray-400 text-lg mb-8 max-w-md leading-relaxed">
             আপনার কি কোনো প্রশ্ন আছে বা নতুন কোনো আইডিয়া নিয়ে কথা বলতে চান? নিচের ফর্মটি পূরণ করুন, আমি খুব শীঘ্রই যোগাযোগ করব।
           </p>
-          
+
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-gray-300">
               <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
@@ -46,21 +46,21 @@ export default function ProfessionalContact() {
               </div>
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-widest">Email me at</p>
-                <p className="font-bold">abu.rayhan@email.com</p>
+                <p className="font-bold">ihaveawonderfull@gmail.com</p>
               </div>
             </div>
           </div>
         </motion.div>
 
         {/* Right Side: Form */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="relative p-8 md:p-12 rounded-[2.5rem] bg-[#0c0c0c] border border-white/5 shadow-2xl"
         >
           {isSubmitSuccessful ? (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               className="text-center py-20"
@@ -87,9 +87,9 @@ export default function ProfessionalContact() {
               <div className="relative group">
                 <Mail className="absolute left-4 top-4 text-gray-600 group-focus-within:text-blue-500 transition-colors" size={20} />
                 <input
-                  {...register("email", { 
-                    required: "ইমেইল প্রয়োজন", 
-                    pattern: { value: /^\S+@\S+$/i, message: "সঠিক ইমেইল দিন" } 
+                  {...register("email", {
+                    required: "ইমেইল প্রয়োজন",
+                    pattern: { value: /^\S+@\S+$/i, message: "সঠিক ইমেইল দিন" }
                   })}
                   placeholder="আপনার ইমেইল"
                   className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 outline-none focus:border-blue-500/50 focus:bg-white/[0.08] transition-all"

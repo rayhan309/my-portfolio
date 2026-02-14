@@ -2,70 +2,93 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Github, Linkedin, Twitter, ExternalLink, Layers, Zap, ArrowUpRight, Heart, ArrowRight } from "lucide-react";
+import HeroSection from "@/Components/Hero/Hero";
+import AboutStory from "@/Components/About/About";
+import MyProcess from "@/Components/MyProcess/MyProcess";
+import Services from "@/Components/Services/Services";
+import ProfessionalContact from "@/Components/Contact/Contact";
+import Footer from "@/Components/Footer/Footer";
+import ProjectSection from "@/Components/ProjectSection/ProjectSection";
 // ... (অন্যান্য ইমপোর্ট আগের মতোই থাকবে)
 
 
 const allProjects = [
   // প্রথম ৩টি প্রজেক্ট (সবসময় দেখা যাবে)
   {
-    title: "Eco-Commerce OS",
+    title: "Flexship IT Company Management System",
     category: "Full-Stack Development",
-    desc: "হাই-পারফরম্যান্স ই-কমার্স প্ল্যাটফর্ম যেখানে Real-time Inventory এবং Stripe পেমেন্ট গেটওয়ে আছে।",
-    tech: ["Next.js", "MongoDB", "Stripe"],
-    live: "#",
-    github: "#",
+    desc: "একটি সম্পূর্ণ কোম্পানি ম্যানেজমেন্ট সিস্টেম যেখানে কর্মচারী, বিভাগ, বেতন, ছুটি, দৈনিক হাজিরা এবং অন্যান্য প্রশাসনিক কাজ পরিচালনা করা যায়।",
+    tech: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
+    feature: ["Group Chat", "File Sharing", "File Sharing", "File Sharing", "File Sharing"],
+    live: "https://flexship-it.vercel.app",
+    github: "https://github.com/rayhan309/flexshipit-group-chats-clint",
     color: "from-blue-600/20 to-cyan-500/20",
   },
   {
-    title: "Motion Dashboard",
-    category: "Animated SaaS UI",
-    desc: "জটিল ডেটা ভিজ্যুয়ালাইজেশনের জন্য একটি অ্যানিমেটেড ড্যাশবোর্ড। এতে Framer Motion ব্যবহার করা হয়েছে।",
-    tech: ["React", "Framer Motion", "Recharts"],
-    live: "#",
-    github: "#",
+    title: "FairBazar E-Commerce",
+    category: "Full-Stack Development",
+    desc: "পোশাক কেনা-বেচার একটি পূর্ণাঙ্গ প্ল্যাটফর্ম যেখানে কাস্টমার হোম ডেলিভারি ও ক্যাশ অন ডেলিভারি (COD) অথবা SSL Commarz-এর মাধ্যমে নিরাপদ পেমেন্ট সুবিধা রয়েছে।",
+    tech: ["React", "Node.js", "Express", "SSL Commarz", "MongoDB"],
+    feature: ["Group Chat", "File Sharing", "File Sharing", "File Sharing", "File Sharing"],
+    live: "https://fairbazar.vercel.app",
+    github: "https://github.com/rayhan309",
     color: "from-purple-600/20 to-pink-500/20",
   },
   {
-    title: "TaskFlow Pro",
-    category: "Productivity Tool",
-    desc: "টিম কোলাবোরেশনের জন্য রিয়েল-টাইম আপডেটসহ একটি ড্র্যাগ-এন্ড-ড্রপ টাস্ক ম্যানেজমেন্ট সিস্টেম।",
-    tech: ["Next.js", "Socket.io", "Prisma"],
-    live: "#",
-    github: "#",
+    title: "ChatNest - Real-time Chat App",
+    category: "Full-Stack Development",
+    desc: "Socket.io এবং React.js ব্যবহার করে তৈরি একটি রিয়েল-টাইম মেসেজিং প্ল্যাটফর্ম, যেখানে ব্যবহারকারীরা গ্রুপ  চ্যাটের মাধ্যমে যুক্ত থাকতে পারেন।",
+    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+    feature: ["Group Chat", "File Sharing", "Voice Chat", "Video Chat", "File Sharing"],
+    live: "https://chatsnest.vercel.app",
+    github: "https://github.com/rayhan309/flexshipit-group-chats-clint",
     color: "from-green-600/20 to-emerald-500/20",
   },
   // হিডেন প্রজেক্টস (বাটনে ক্লিক করলে দেখা যাবে)
   {
-    title: "AI Image Generator",
-    category: "AI Integration",
-    desc: "OpenAI API ব্যবহার করে টেক্সট থেকে ইমেজ তৈরির একটি ডাইনামিক ওয়েব অ্যাপ্লিকেশন।",
-    tech: ["Next.js", "OpenAI", "Cloudinary"],
-    live: "#",
-    github: "#",
+    title: "Land Office Automation System Portal",
+    category: "Full-Stack Development",
+    feature: [
+      "Dynamic Service Showcase",
+      "High-Performance Optimization",
+      "Interactive User Interface",
+      "Seamless Client Experience",
+      "Fully Responsive Design"
+    ],
+    desc: "ভূমি অফিসের দাপ্তরিক কার্যক্রম এবং নাগরিক সেবা ডিজিটালাইজ করার একটি স্মার্ট প্ল্যাটফর্ম, যা ভূমির রেকর্ড ব্যবস্থাপনা ও সেবা প্রদান প্রক্রিয়াকে দ্রুততর করে।",
+    tech: ["Next.js", "Socket.io", "ImageKit", "Secure Auth", "MongoDB"],
+    live: "https://next-js-la-section-automation.vercel.app",
+    github: "https://github.com/rayhan309/",
     color: "from-orange-600/20 to-red-500/20",
   },
   {
-    title: "Crypto Portfolio",
-    category: "Web3/Fintech",
-    desc: "ক্রিপ্টোকারেন্সি পোর্টফোলিও ট্র্যাকার যা লাইভ মার্কেট ডেটা এবং চার্ট প্রদর্শন করে।",
+    title: "Xorit - Skill Development Academy",
+    category: "Full-Stack Development",
+    feature: [
+      "Advanced Course Curriculum",
+      "Software Development Roadmap",
+      "Cyber Security Modules",
+      "AI & Machine Learning Insights",
+      "Student Progress Tracking"
+    ],
+    desc: "এভবিষ্যতের টেক লিডার তৈরির জন্য একটি আধুনিক লার্নিং প্ল্যাটফর্ম, যেখানে সফটওয়্যার ডেভেলপমেন্ট, সাইবার সিকিউরিটি এবং AI/ML-এর মতো ডিমান্ডিং স্কিল শেখানো হয়।",
     tech: ["React", "Tailwind", "Coingecko API"],
-    live: "#",
-    github: "#",
+    live: "https://xor_it.vercel.app",
+    github: "https://github.com/rayhan309/",
     color: "from-yellow-600/20 to-amber-500/20",
-  },
-  {}
+  }
 ];
 
 export default function FixedPortfolio() {
   const scrollRef = useRef(null);
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   const { scrollYProgress } = useScroll({
     target: scrollRef,
   });
 
   // Smooth Scroll Physics
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-150%"]);
   const springX = useSpring(x, { stiffness: 100, damping: 20 });
 
   // Background color interpolation for a "Liquid" feel
@@ -79,6 +102,11 @@ export default function FixedPortfolio() {
     <motion.div style={{ backgroundColor: bgColor }} className="text-primary transition-colors duration-700">
 
       {/* ... Hero, About, Process Sections ... */}
+      <HeroSection />
+
+      <AboutStory />
+
+      <MyProcess />
 
       {/* --- Unique Horizontal Scroll Section --- */}
       <section ref={scrollRef} className="relative h-[400vh]">
@@ -105,14 +133,14 @@ export default function FixedPortfolio() {
             ))}
 
             {/* Final "Let's Work" Card */}
-            <div className="flex-shrink-0 w-[400px] h-[500px] flex items-center justify-center border-2 border-dashed border-white/10 rounded-[2.5rem] group hover:border-blue-500/50 transition-colors">
+            {/* <div className="flex-shrink-0 w-[400px] h-[500px] flex items-center justify-center border-2 border-dashed border-white/10 rounded-[2.5rem] group hover:border-blue-500/50 transition-colors">
               <button className="flex flex-col items-center gap-4 group">
                 <div className="p-6 bg-blue-600 rounded-full group-hover:scale-110 transition-transform">
                   <ArrowRight size={40} className="-rotate-45" />
                 </div>
                 <span className="text-2xl font-bold">View All Projects</span>
               </button>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Progress Bar at Bottom */}
@@ -126,6 +154,39 @@ export default function FixedPortfolio() {
       </section>
 
       {/* ... Rest of the Sections (Services, Contact, Footer) ... */}
+      <ProjectSection />
+      <Services />
+      <ProfessionalContact />
+
+      {/* Skills Bento Section */}
+
+      {/* <section className="py-32 px-6 lg:px-24">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div className="p-10 rounded-[2rem] bg-[#111] border border-white/5 md:col-span-2">
+
+            <Layers className="text-blue-500 mb-6" />
+
+            <h3 className="text-3xl text-primary font-bold mb-4">Frontend Architecture</h3>
+
+            <p className="text-gray-500">React এবং Next.js এর মাধ্যমে আমি হাই-পারফরম্যান্স ফ্রন্টএন্ড তৈরি করি।</p>
+
+          </div>
+
+          <div className="p-10 rounded-[2rem] bg-blue-600 text-white flex flex-col justify-center items-center text-center">
+
+            <Zap size={40} className="mb-4" />
+
+            <h3 className="text-2xl font-bold">Fast Performance</h3>
+
+          </div>
+
+        </div>
+
+      </section> */}
+
+      <Footer />
 
       {/* Custom Global CSS for Stroke Text */}
       <style jsx global>{`
@@ -142,7 +203,7 @@ const ProjectCard = ({ item, index }) => {
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className="flex-shrink-0 w-[350px] md:w-[650px] h-[450px] md:h-[550px] rounded-[3rem] bg-[#0A0A0A] border border-white/5 p-10 flex flex-col justify-between relative group overflow-hidden"
+      className="flex-shrink-0 w-[350px] md:w-[650px] max-h-[450px] md:h-[550px] rounded-[3rem] bg-[#0A0A0A] border border-white/5 p-10 flex flex-col justify-between relative group overflow-hidden"
     >
       {/* Background Tech Text Overlay (Unique Touch) */}
       <div className="absolute -right-10 -top-10 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none group-hover:text-blue-500/[0.05] transition-colors">
@@ -169,10 +230,10 @@ const ProjectCard = ({ item, index }) => {
       </div>
 
       <div className="z-10 flex items-center gap-6">
-        <a href={item?.live} className="flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-blue-600 hover:text-white transition-all duration-300">
+        <a href={item?.live} target="_blank" className="flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-blue-600 hover:text-white transition-all duration-300">
           Live Preview <ExternalLink size={18} />
         </a>
-        <a href={item?.github} className="text-white/50 hover:text-white transition-colors">
+        <a href={item?.github} target="_blank" className="text-white/50 hover:text-white transition-colors">
           <Github size={24} />
         </a>
       </div>
