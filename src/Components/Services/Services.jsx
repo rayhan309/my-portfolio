@@ -170,7 +170,7 @@ export default function Services() {
                 {selectedService.icon}
               </div>
 
-              <h3 className="text-3xl font-black text-slate-900 mb-4 tracking-tighter">
+              <h3 className="text-3xl font-bold text-slate-900 mb-4 tracking-tighter">
                 {selectedService.title}
               </h3>
 
