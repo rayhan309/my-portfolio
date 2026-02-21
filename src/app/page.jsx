@@ -1,14 +1,11 @@
 "use client";
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { Github, Linkedin, Twitter, ExternalLink, Layers, Zap, ArrowUpRight, Heart, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import HeroSection from "@/Components/Hero/Hero";
 import AboutStory from "@/Components/About/About";
 import MyProcess from "@/Components/MyProcess/MyProcess";
 import Services from "@/Components/Services/Services";
 import ProfessionalContact from "@/Components/Contact/Contact";
 import Footer from "@/Components/Footer/Footer";
-import ProjectSection from "@/Components/ProjectSection/ProjectSection";
 import Experience from "@/Components/Exp/Exp";
 import HorizontalProjects from "@/Components/ScrollProject/ScrollProject";
 // ... (অন্যান্য ইমপোর্ট আগের মতোই থাকবে)
@@ -82,76 +79,32 @@ const allProjects = [
 ];
 
 export default function FixedPortfolio() {
-  // const scrollRef = useRef(null);
-  // // const currentYear = new Date().getFullYear();
-
-  // const { scrollYProgress } = useScroll({
-  //   target: scrollRef,
-  // });
-
-  // Smooth Scroll Physics
-  // const x = useTransform(scrollYProgress, [0, 1], ["0%", "-150%"]);
-  // const springX = useSpring(x, { stiffness: 100, damping: 20 });
-
-  // // Background color interpolation for a "Liquid" feel
-  // const bgColor = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.5, 1],
-  //   ["#000000", "#050a15", "#000000"]
-  // );
 
   return (
     <motion.div className="text-primary transition-colors duration-700">
 
-      {/* ... Hero, About, Process Sections ... */}
+      {/* Hero Section */}
       <HeroSection />
 
-
-
+      {/* About Section */}
       <AboutStory />
 
+      {/* Experience Section */}
       <Experience />
 
+      {/* My Process Section */}
       <MyProcess />
 
       {/* --- Unique Horizontal Scroll Section --- */}
       <HorizontalProjects allProjects={allProjects} />
 
-      {/* ... Rest of the Sections (Services, Contact, Footer) ... */}
-      {/* <ProjectSection /> */}
-
+      {/* Services Section */}
       <Services />
 
+      {/* Professional Contact Section */}
       <ProfessionalContact />
 
-      {/* Skills Bento Section */}
-
-      {/* <section className="py-32 px-6 lg:px-24">
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          <div className="p-10 rounded-[2rem] bg-[#111] border border-white/5 md:col-span-2">
-
-            <Layers className="text-blue-500 mb-6" />
-
-            <h3 className="text-3xl text-primary font-bold mb-4">Frontend Architecture</h3>
-
-            <p className="text-gray-500">React এবং Next.js এর মাধ্যমে আমি হাই-পারফরম্যান্স ফ্রন্টএন্ড তৈরি করি।</p>
-
-          </div>
-
-          <div className="p-10 rounded-[2rem] bg-blue-600 text-white flex flex-col justify-center items-center text-center">
-
-            <Zap size={40} className="mb-4" />
-
-            <h3 className="text-2xl font-bold">Fast Performance</h3>
-
-          </div>
-
-        </div>
-
-      </section> */}
-
+      {/* Footer Section */}
       <Footer />
 
       {/* Custom Global CSS for Stroke Text */}
@@ -163,49 +116,3 @@ export default function FixedPortfolio() {
     </motion.div>
   );
 }
-
-// Separate Component for cleaner code
-const ProjectCard = ({ item, index }) => {
-  return (
-    <motion.div
-      whileHover={{ y: -10 }}
-      className="flex-shrink-0 w-[350px] md:w-[650px] max-h-[450px] md:h-[550px] rounded-[3rem] bg-[#0A0A0A] border border-white/5 p-10 flex flex-col justify-between relative group overflow-hidden"
-    >
-      {/* Background Tech Text Overlay (Unique Touch) */}
-      <div className="absolute -right-10 -top-10 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none group-hover:text-blue-500/[0.05] transition-colors">
-        0{index + 1}
-      </div>
-
-      <div className="z-10">
-        <div className="flex justify-between items-start">
-          <span className="px-4 py-1 rounded-full border border-white/10 text-xs font-mono text-gray-400">
-            {item?.category}
-          </span>
-          <div className="flex gap-2">
-            {item?.tech?.map((t, i) => (
-              <span key={i} className="text-[10px] uppercase tracking-widest text-blue-400 font-bold">{t}</span>
-            ))}
-          </div>
-        </div>
-        <h3 className="text-4xl md:text-5xl font-bold mt-6 group-hover:text-blue-500 transition-colors">
-          {item?.title}
-        </h3>
-        <p className="text-gray-400 mt-4 max-w-sm text-lg leading-relaxed">
-          {item?.desc}
-        </p>
-      </div>
-
-      <div className="z-10 flex items-center gap-6">
-        <a href={item?.live} target="_blank" className="flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-blue-600 hover:text-white transition-all duration-300">
-          Live Preview <ExternalLink size={18} />
-        </a>
-        <a href={item?.github} target="_blank" className="text-white/50 hover:text-white transition-colors">
-          <Github size={24} />
-        </a>
-      </div>
-
-      {/* Hover Image Reveal or Gradient Glow */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${item?.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-0`} />
-    </motion.div>
-  );
-};
