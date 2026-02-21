@@ -9,6 +9,8 @@ import Services from "@/Components/Services/Services";
 import ProfessionalContact from "@/Components/Contact/Contact";
 import Footer from "@/Components/Footer/Footer";
 import ProjectSection from "@/Components/ProjectSection/ProjectSection";
+import Experience from "@/Components/Exp/Exp";
+import HorizontalProjects from "@/Components/ScrollProject/ScrollProject";
 // ... (অন্যান্য ইমপোর্ট আগের মতোই থাকবে)
 
 
@@ -57,7 +59,7 @@ const allProjects = [
     ],
     desc: "ভূমি অফিসের দাপ্তরিক কার্যক্রম এবং নাগরিক সেবা ডিজিটালাইজ করার একটি স্মার্ট প্ল্যাটফর্ম, যা ভূমির রেকর্ড ব্যবস্থাপনা ও সেবা প্রদান প্রক্রিয়াকে দ্রুততর করে।",
     tech: ["Next.js", "Socket.io", "ImageKit", "Secure Auth", "MongoDB"],
-    live: "https://next-js-la-section-automation.vercel.app",
+    live: "https://gvmportal.vercel.app",
     github: "https://github.com/rayhan309/",
     color: "from-orange-600/20 to-red-500/20",
   },
@@ -73,89 +75,53 @@ const allProjects = [
     ],
     desc: "এভবিষ্যতের টেক লিডার তৈরির জন্য একটি আধুনিক লার্নিং প্ল্যাটফর্ম, যেখানে সফটওয়্যার ডেভেলপমেন্ট, সাইবার সিকিউরিটি এবং AI/ML-এর মতো ডিমান্ডিং স্কিল শেখানো হয়।",
     tech: ["React", "Tailwind", "Coingecko API"],
-    live: "https://xor_it.vercel.app",
+    live: "https://xorit.vercel.app",
     github: "https://github.com/rayhan309/",
     color: "from-yellow-600/20 to-amber-500/20",
   }
 ];
 
 export default function FixedPortfolio() {
-  const scrollRef = useRef(null);
-  // const currentYear = new Date().getFullYear();
+  // const scrollRef = useRef(null);
+  // // const currentYear = new Date().getFullYear();
 
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: scrollRef,
+  // });
 
   // Smooth Scroll Physics
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-150%"]);
-  const springX = useSpring(x, { stiffness: 100, damping: 20 });
+  // const x = useTransform(scrollYProgress, [0, 1], ["0%", "-150%"]);
+  // const springX = useSpring(x, { stiffness: 100, damping: 20 });
 
-  // Background color interpolation for a "Liquid" feel
-  const bgColor = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ["#000000", "#050a15", "#000000"]
-  );
+  // // Background color interpolation for a "Liquid" feel
+  // const bgColor = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.5, 1],
+  //   ["#000000", "#050a15", "#000000"]
+  // );
 
   return (
-    <motion.div style={{ backgroundColor: bgColor }} className="text-primary transition-colors duration-700">
+    <motion.div className="text-primary transition-colors duration-700">
 
       {/* ... Hero, About, Process Sections ... */}
       <HeroSection />
 
+
+
       <AboutStory />
+
+      <Experience />
 
       <MyProcess />
 
       {/* --- Unique Horizontal Scroll Section --- */}
-      <section ref={scrollRef} className="relative h-[400vh]">
-        <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-
-          {/* Section Header with Reveal Animation */}
-          <div className="px-6 lg:px-24 mb-10">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-4"
-            >
-              <div className="h-[1px] w-12 bg-blue-500" />
-              <span className="text-blue-500 font-mono tracking-widest uppercase text-sm">Portfolio</span>
-            </motion.div>
-            <h2 className="text-6xl md:text-8xl font-black tracking-tighter mt-2">
-              SELECTED <span className="text-transparent stroke-text">WORKS</span>
-            </h2>
-          </div>
-
-          <motion.div style={{ x: springX }} className="flex gap-12 px-6 lg:px-24">
-            {allProjects.map((item, index) => (
-              <ProjectCard key={index} item={item} index={index} />
-            ))}
-
-            {/* Final "Let's Work" Card */}
-            {/* <div className="flex-shrink-0 w-[400px] h-[500px] flex items-center justify-center border-2 border-dashed border-white/10 rounded-[2.5rem] group hover:border-blue-500/50 transition-colors">
-              <button className="flex flex-col items-center gap-4 group">
-                <div className="p-6 bg-blue-600 rounded-full group-hover:scale-110 transition-transform">
-                  <ArrowRight size={40} className="-rotate-45" />
-                </div>
-                <span className="text-2xl font-bold">View All Projects</span>
-              </button>
-            </div> */}
-          </motion.div>
-
-          {/* Progress Bar at Bottom */}
-          <div className="absolute bottom-12 left-6 lg:left-24 right-6 lg:right-24 h-[2px] bg-white/5">
-            <motion.div
-              style={{ scaleX: scrollYProgress }}
-              className="h-full bg-blue-600 origin-left"
-            />
-          </div>
-        </div>
-      </section>
+      <HorizontalProjects allProjects={allProjects} />
 
       {/* ... Rest of the Sections (Services, Contact, Footer) ... */}
-      <ProjectSection />
+      {/* <ProjectSection /> */}
+
       <Services />
+
       <ProfessionalContact />
 
       {/* Skills Bento Section */}

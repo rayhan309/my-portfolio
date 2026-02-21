@@ -1,13 +1,17 @@
 @import "tailwindcss";
- @plugin "daisyui" {
-   themes: dark;
- }
 
- @plugin "daisyui/theme" {
+@plugin "daisyui" {
+  themes: dark;
+}
+
+@plugin "daisyui/theme" {
   name: "mytheme";
-  default: true; /* set as default */
-  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
-  color-scheme: dark; /* color of browser-provided UI */
+  default: true;
+  /* set as default */
+  prefersdark: false;
+  /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: dark;
+  /* color of browser-provided UI */
 
   --color-base-100: oklch(98% 0.02 240);
   --color-base-200: oklch(95% 0.03 240);
@@ -47,7 +51,7 @@
   --noise: 0;
 }
 
-.my-text{
+.my-text {
   @apply text-transparent bg-clip-text bg-linear-to-r from-primary via-blue-200 to-secondary
 }
 
@@ -74,12 +78,10 @@
 
 .glass-card {
   backdrop-filter: blur(14px);
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.08),
-    rgba(255,255,255,0.02)
-  );
-  border: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* body {
@@ -88,11 +90,10 @@
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-body{
-  @apply bg-[#0f1115]
+body {
+  @apply bg-[#F8FAFC]
 }
 
 
 
- @custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
-
+@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
