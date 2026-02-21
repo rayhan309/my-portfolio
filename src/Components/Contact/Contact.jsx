@@ -119,7 +119,7 @@ export default function ProfessionalContact() {
               {/* Submit Button */}
               <button
                 disabled={isSubmitting}
-                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-5 rounded-2xl transition-all flex items-center justify-center gap-2 group disabled:opacity-50 shadow-xl shadow-blue-900/10"
+                className="w-full bg-slate-900 hover:bg-blue-600 cursor-pointer text-white font-bold py-5 rounded-2xl transition-all flex items-center justify-center gap-2 group disabled:opacity-50 shadow-xl shadow-blue-900/10"
               >
                 {isSubmitting ? "পাঠানো হচ্ছে..." : "মেসেজ পাঠান"}
                 {!isSubmitting && <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}

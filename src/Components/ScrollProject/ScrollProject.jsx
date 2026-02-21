@@ -8,13 +8,13 @@ import Link from "next/link";
 const ProjectCard = ({ item, index }) => {
     return (
         <motion.div
-            className="flex-shrink-0 w-full lg:w-[500px] group"
+            className="flex-shrink-0 w-full lg:w-[500px] group "
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
         >
-            <div className="relative h-full lg:h-[550px] rounded-[2rem] lg:rounded-[3rem] bg-white border border-slate-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 flex flex-col">
+            <div className="relative h-full lg:h-[550px] rounded-[2rem] lg:rounded-[3rem] bg-white border border-slate-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 flex flex-col ">
 
                 {/* Project Color Header */}
                 <div className={`h-32  lg:h-40 bg-gradient-to-br ${item.color} flex items-center justify-center relative`}>
@@ -79,7 +79,7 @@ export default function ProfessionalProjects({ allProjects }) {
     return (
         <>
             {/* Mobile & Tablet Version (Vertical Stack) */}
-            <section className="lg:hidden py-20 px-6 bg-[#F8FAFC]">
+            <section className="lg:hidden py-20 px-6 bg-[#F8FAFC] container mx-auto">
                 <div className="mb-12 text-center">
                     <span className="text-blue-600 font-mono text-xs font-bold tracking-widest uppercase">// My Portfolio</span>
                     <h2 className="text-4xl font-black tracking-tighter text-slate-900 mt-2 italic">SELECTED WORKS</h2>

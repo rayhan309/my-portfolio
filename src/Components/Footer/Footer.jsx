@@ -6,7 +6,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="relative bg-[#F8FAFC] pt-40 pb-10 px-6 lg:px-24 overflow-hidden">
+        <footer className="relative bg-[#F8FAFC] pt-40 pb-10 px-10 lg:px-4 overflow-hidden">
 
             {/* Top Border Line with Gradient */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
@@ -77,7 +77,7 @@ const Footer = () => {
                     {/* Time & Location Display */}
                     <div className="hidden lg:flex gap-10 text-[10px] text-slate-400 font-mono uppercase tracking-[0.2em]">
                         <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> Dhaka, BD
+                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> Dhaka, Gopalganj, Bangladesh
                         </div>
                         <div>Time: {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} GMT+6</div>
                     </div>

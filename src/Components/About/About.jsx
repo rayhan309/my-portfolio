@@ -26,7 +26,7 @@ const milestones = [
 
 export default function AboutStory() {
   return (
-    <section id="about" className="py-24 px-6 lg:px-24 relative bg-[#F8FAFC]">
+    <section id="about" className="py-24 px-4 relative bg-[#F8FAFC]">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
