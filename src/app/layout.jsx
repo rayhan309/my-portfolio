@@ -1,15 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// font family
+const fontFamily = "--font-geist-sans";
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -18,24 +11,34 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Rayhan | Full-Stack Developer Portfolio",
+    default: "Rayhan | Full-Stack Developer at FlexshipIT",
     template: "%s | Rayhan Portfolio"
   },
-  description: "Full-Stack Developer specializing in React, Next.js, and Node.js. Check out my projects like ChatNest, Land Office Automation, and Xorit Academy.",
-  keywords: ["Full-Stack Developer", "Next.js Developer", "Software Engineer", "MERN Stack", "Cyber Security", "AI/ML Learning Platform"],
-  authors: [{ name: "Rayhan" }],
+  description: "Full-Stack Developer at FlexshipIT specializing in Next.js, React, MongoDB, and Real-time systems with Socket.io. Explore my work on Land Office Automation, FairBazar, and ChatNest.",
+  keywords: [
+    "Rayhan Full-Stack Developer",
+    "FlexshipIT Developer",
+    "Next.js Expert Bangladesh",
+    "MERN Stack Developer Gopalganj",
+    "Socket.io Real-time Apps",
+    "GSAP & Framer Motion Animations",
+    "Gatsby Static Site Developer",
+    "Software Engineer Portfolio"
+  ],
+  authors: [{ name: "Rayhan", url: "https://rayhan309.vercel.app" }],
   creator: "Rayhan",
+  metadataBase: new URL("https://rayhan309.vercel.app"), // Replace with your actual domain
   openGraph: {
-    title: "Rayhan | Full-Stack Developer Portfolio",
-    description: "Building modern web applications with Next.js and Node.js.",
-    url: "https://rayhan.vercel.app",
+    title: "Rayhan | Full-Stack Engineer & Creative Developer",
+    description: "Specializing in high-performance web applications, Real-time Socket.io systems, and premium UI animations at FlexshipIT.",
+    url: "https://rayhan309.vercel.app",
     siteName: "Rayhan Portfolio",
     images: [
       {
-        url: "/logo.png", // আপনার একটি ভালো ছবির লিঙ্ক এখানে দিন
+        url: "/logo.png", // Recommended: 1200x630 pixel image
         width: 1200,
         height: 630,
-        alt: "Rayhan Portfolio Preview",
+        alt: "Rayhan - Full-Stack Developer Portfolio Preview",
       },
     ],
     locale: "en_US",
@@ -43,13 +46,24 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rayhan | Full-Stack Developer",
-    description: "Expertise in React, Next.js, and Web Automation.",
+    title: "Rayhan | Full-Stack Developer @ FlexshipIT",
+    description: "Building scalable web solutions with Next.js, Socket.io, and GSAP. Check out my latest projects.",
     images: ["/logo.png"],
+    creator: "@rayhan309", // Change to your actual Twitter handle
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code", // Google Search Console code
   },
 };
 
@@ -57,7 +71,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fontFamily} antialiased`}
       >
         {children}
       </body>
