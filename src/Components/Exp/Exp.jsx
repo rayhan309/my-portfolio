@@ -10,7 +10,7 @@ const experiences = [
         location: "Gopalganj, Bangladesh",
         duration: "2025 - Present",
         description: "FlexshipIT-তে আমি একজন ফুল-স্ট্যাক ডেভেলপার হিসেবে স্কেলেবল ওয়েব অ্যাপ্লিকেশন এবং ইন্টারঅ্যাকটিভ ক্লায়েন্ট সল্যুশন তৈরি করছি। রিয়েল-টাইম কমিউনিকেশন ও জটিল অ্যানিমেশন আমার কাজের প্রধান কেন্দ্রবিন্দু।",
-        skills: ["Next.js", "React", "Gatsby", "Node.js", "Express.js", "WebSocket", "Socket.io", "MongoDB", "Tailwind", "GSAP", "Framer Motion", "MUI", "Shadcn UI"],
+        skills: ["Next.js", "React", "Gatsby", "Node.js", "Express.js", "WebSocket", "Socket.io", "MongoDB", "MUI", "Shadcn UI", "Tailwind", "GSAP", "Framer Motion",],
         highlights: [
             "উচ্চ-ক্ষমতাসম্পন্ন ক্লায়েন্ট-সাইড ও সার্ভার-সাইড আর্কিটেকচার ডেভেলপমেন্ট।",
             "MongoDB Atlas ব্যবহার করে অপ্টিমাইজড স্কিমা ও ডাটা ম্যানেজমেন্ট।",

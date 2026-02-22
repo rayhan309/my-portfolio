@@ -64,7 +64,7 @@ export default function HeroSection() {
                         আমি একজন ফুল-স্ট্যাক ডেভেলপার যে আপনার আইডিয়াকে বাস্তবে রূপান্তর করতে আধুনিক ওয়েব টেকনোলজি যেমন <span className="text-slate-900 font-bold">Next.js</span> এবং <span className="text-slate-900 font-bold">Node.js</span> ব্যবহার করে।
                     </motion.p>
 
-                    {/* Action Buttons - Fully Responsive Grid/Flex */}
+                    {/* Action Buttons - Fully Responsive grid felx shop id good /Flex */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
