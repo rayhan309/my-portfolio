@@ -1,106 +1,138 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, Rocket, Heart, Coffee, Terminal } from "lucide-react";
+import { Code2, Rocket, Heart, Coffee, Terminal, Sparkles } from "lucide-react";
 
 const milestones = [
   {
     year: "2025",
-    title: "The Beginning",
-    desc: "২০২৫ সালে কোডিংয়ের সমুদ্রে যাত্রা শুরু। প্রথম যখন ব্রাউজারে নিজের লেখা কোডটি জীবন্ত হতে দেখলাম, তখনই বুঝেছিলাম এটিই আমার গন্তব্য।",
-    icon: <Terminal className="text-blue-600" />, // Icon color ektu deep kora hoyeche
+    title: "The Awakening",
+    desc: "২০২৫ সালে কোডিংয়ের অফুরন্ত সমুদ্রে আমার যাত্রা শুরু। প্রথম কোড যখন ব্রাউজারে সফলভাবে কাজ করলো, সেই মুহূর্তটাই আমার জীবনের মোড় ঘুরিয়ে দেয়।",
+    icon: <Terminal size={20} />,
+    color: "blue",
   },
   {
     year: "Early 2026",
-    title: "MERN Stack Mastery",
-    desc: "খুব অল্প সময়েই আমি React, Node.js এবং MongoDB ব্যবহার করে ফুল-স্ট্যাক অ্যাপ্লিকেশন তৈরিতে দক্ষ হয়ে উঠি।",
-    icon: <Code2 className="text-purple-600" />,
+    title: "Full-Stack Evolution",
+    desc: "অদম্য কৌতূহল থেকে আমি React, Node.js এবং MongoDB-তে দক্ষতা অর্জন করি। ডেটাবেস থেকে ইন্টারফেস—সবকিছুই আমার নিয়ন্ত্রণে আসতে থাকে।",
+    icon: <Code2 size={20} />,
+    color: "purple",
   },
   {
     year: "Present",
-    title: "Abu Rayhan - Interactive Developer",
-    desc: "বর্তমানে আমি Next.js এবং Framer Motion ব্যবহার করে এমন ওয়েব অ্যাপ তৈরি করছি যা একইসাথে পাওয়ারফুল এবং দৃষ্টিনন্দন।",
-    icon: <Rocket className="text-emerald-600" />,
+    title: "Interactive Architect",
+    desc: "বর্তমানে আমি Next.js এবং আধুনিক অ্যানিমেশন লাইব্রেরি ব্যবহার করে এমন ডিজিটাল অভিজ্ঞতা তৈরি করছি যা ইউজারকে মুগ্ধ করে।",
+    icon: <Rocket size={20} />,
+    color: "emerald",
   },
 ];
 
 export default function AboutStory() {
   return (
-    <section id="about" className="py-24 px-4 relative bg-[#F8FAFC]">
+    <section id="about" className="py-24 px-6 lg:px-24 relative bg-[#fdfdfd] overflow-hidden">
+      {/* Background Subtle Gradient */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-blue-50/50 blur-[120px] rounded-full pointer-events-none" />
+
       <div className="container mx-auto">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
-          <div className="max-w-2xl">
-            {/* text-primary changed to blue-600 for light bg */}
-            <h2 className="text-blue-600 font-mono text-sm tracking-widest uppercase mb-4 font-bold">// My Journey</h2>
-            <h3 className="text-5xl md:text-7xl font-black tracking-tighter italic uppercase text-slate-900">
-              Beyond the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">Pixels.</span>
-            </h3>
-          </div>
-          <div className="text-slate-400 font-mono text-xs uppercase hidden md:block tracking-widest leading-loose">
-            Abu Rayhan <br /> Based in Bangladesh
-          </div>
+        {/* --- Header Section --- */}
+        <div className="flex flex-col gap-4 mb-20 border-l-4 border-blue-600 pl-6 md:pl-10">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-2 text-blue-600 font-mono text-sm tracking-widest uppercase font-bold"
+          >
+            <Sparkles size={16} /> My Narrative
+          </motion.div>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-7xl font-black tracking-tighter text-slate-900 leading-none uppercase"
+          >
+            Beyond the <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 italic">
+              Pixels & Logic.
+            </span>
+          </motion.h3>
         </div>
 
-        {/* Story Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-22 items-start">
-          {/* Left Side: Bio */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="space-y-6"
-          >
-            <p className="text-xl text-slate-500 leading-relaxed font-light italic">
-              "আমি বিশ্বাস করি কোড শুধুমাত্র মেশিনকে ইনস্ট্রাকশন দেওয়া নয়, এটি একটি শিল্প যার মাধ্যমে মানুষের সমস্যার সমাধান করা সম্ভব।"
-            </p>
+        {/* --- Main Content Grid --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-            {/* Bio Card: Light Mode Friendly (White BG with shadow) */}
-            <div className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-xl shadow-blue-900/5 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <h4 className="text-2xl font-bold mb-4 text-slate-900 relative z-10">কে আমি?</h4>
-              <p className="text-slate-600 leading-relaxed relative z-10">
-                আমি আবু রায়হান, একজন ফুল-স্ট্যাক ডেভেলপার যে ক্লিন কোড এবং অসাধারণ ইউজার এক্সপেরিয়েন্সের মিশেল ঘটাতে পছন্দ করে। কোডিংয়ের বাইরে আমি নতুন টেকনোলজি নিয়ে রিসার্চ করতে এবং কফি হাতে মিউজিক শুনতে ভালোবাসি।
-              </p>
-              <div className="flex gap-4 mt-8 relative z-10">
-                <div className="flex items-center gap-2 text-xs font-mono text-slate-500 bg-slate-50 px-3 py-1.5 rounded-full">
-                  <Coffee size={14} className="text-orange-500" /> Coffee Lover
-                </div>
-                <div className="flex items-center gap-2 text-xs font-mono text-slate-500 bg-slate-50 px-3 py-1.5 rounded-full">
-                  <Heart size={14} className="text-red-500" /> Detail Oriented
-                </div>
+          {/* Left Side: Bio Narrative (5 Columns) */}
+          <div className="lg:col-span-5 space-y-8">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-xl md:text-2xl text-slate-500 leading-relaxed font-light"
+            >
+              "কোডিং আমার কাছে শুধু কাজ নয়, এটি একটি <span className="text-slate-900 font-medium italic">ক্রাফটsmanship</span>—যেখানে প্রতিটা সেমিকোলন একটি বড় পরিবর্তনের অংশ।"
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="p-8 rounded-3xl bg-white border border-slate-100 shadow-2xl shadow-blue-900/5 relative group overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform">
+                <Terminal size={80} />
               </div>
-            </div>
-          </motion.div>
+              <h4 className="text-2xl font-bold mb-4 text-slate-900">আমি কে?</h4>
+              <p className="text-slate-600 leading-relaxed text-lg">
+                আমি আবু রায়হান, একজন প্যাশনেট ফুল-স্ট্যাক ডেভেলপার। আমি জটিল টেকনিক্যাল সমস্যাগুলোকে সহজ এবং সুন্দর ডিজিটাল সমাধানে রূপান্তর করতে পছন্দ করি। যখন আমি কোড করি না, তখন আমাকে কফি মগ হাতে নতুন কোনো টেকনোলজি নিয়ে রিসার্চ করতে দেখা যায়।
+              </p>
 
-          {/* Right Side: Timeline Milestones */}
-          <div className="space-y-8">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex gap-6 group"
-              >
-                <div className="flex flex-col items-center">
-                  {/* Timeline Circle */}
-                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:border-blue-500 group-hover:bg-blue-50 transition-all duration-500">
-                    {milestone.icon}
-                  </div>
-                  {index !== milestones.length - 1 && (
-                    <div className="w-[1px] h-24 bg-gradient-to-b from-slate-200 to-transparent mt-2" />
-                  )}
-                </div>
-                <div className="pb-10">
-                  <span className="text-blue-600 font-mono text-sm font-bold">{milestone.year}</span>
-                  <h4 className="text-xl font-bold text-slate-900 mt-1 group-hover:text-blue-600 transition-colors">{milestone.title}</h4>
-                  <p className="text-slate-500 text-sm mt-3 leading-relaxed max-w-sm">
-                    {milestone.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+              <div className="flex flex-wrap gap-3 mt-8">
+                <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+                  <Coffee size={14} className="text-amber-600" /> Espresso Addict
+                </span>
+                <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+                  <Heart size={14} className="text-rose-500" /> UX Focused
+                </span>
+              </div>
+            </motion.div>
           </div>
+
+          {/* Right Side: Modern Interactive Timeline (7 Columns) */}
+          <div className="lg:col-span-7 pl-0 md:pl-10">
+            <div className="space-y-12 relative">
+              {/* Timeline Line */}
+              <div className="absolute left-6 top-0 w-[2px] h-full bg-slate-100 hidden md:block" />
+
+              {milestones.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                  className="relative flex flex-col md:flex-row gap-8 group"
+                >
+                  {/* Icon Node */}
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-white border-2 border-slate-50 shadow-lg flex items-center justify-center z-10 group-hover:scale-110 group-hover:border-blue-500 transition-all duration-500 text-slate-700 group-hover:text-blue-600">
+                    {item.icon}
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3">
+                      <span className="text-blue-600 font-mono font-bold text-sm tracking-widest">{item.year}</span>
+                      <div className="h-[1px] w-8 bg-blue-100" />
+                    </div>
+                    <h4 className="text-2xl font-black text-slate-900 group-hover:translate-x-2 transition-transform duration-300 uppercase italic tracking-tight">
+                      {item.title}
+                    </h4>
+                    <p className="text-slate-500 text-lg leading-relaxed max-w-xl">
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
