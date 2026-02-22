@@ -61,7 +61,7 @@ export default function HeroSection() {
                         transition={{ delay: 0.3 }}
                         className="text-slate-500 max-w-2xl text-base md:text-xl font-normal leading-relaxed px-4"
                     >
-                        আমি একজন ফুল-স্ট্যাক ডেভেলপার যারা আপনার আইডিয়াকে বাস্তবে রূপান্তর করতে আধুনিক ওয়েব টেকনোলজি যেমন <span className="text-slate-900 font-bold">Next.js</span> এবং <span className="text-slate-900 font-bold">Node.js</span> ব্যবহার করে।
+                        আমি একজন ফুল-স্ট্যাক ডেভেলপার যে আপনার আইডিয়াকে বাস্তবে রূপান্তর করতে আধুনিক ওয়েব টেকনোলজি যেমন <span className="text-slate-900 font-bold">Next.js</span> এবং <span className="text-slate-900 font-bold">Node.js</span> ব্যবহার করে।
                     </motion.p>
 
                     {/* Action Buttons - Fully Responsive Grid/Flex */}
