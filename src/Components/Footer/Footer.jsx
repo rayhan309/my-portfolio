@@ -81,7 +81,7 @@ const Footer = () => {
                         <div className="overflow-hidden mb-8">
                             <a
                                 href="mailto:ihaveawonderfull@gmail.com"
-                                className="footer-cta group relative inline-block text-6xl md:text-9xl font-black tracking-tighter text-slate-900 hover:text-blue-600 transition-colors duration-700 uppercase italic leading-none"
+                                className="footer-cta group relative inline-block text-5xl md:text-8xl font-black tracking-tighter text-slate-900 hover:text-blue-600 transition-colors duration-700 uppercase italic leading-none"
                             >
                                 LET'S <br className="md:hidden" /> TALK.
                                 <span className="absolute -bottom-2 left-0 w-0 h-2 bg-blue-600 group-hover:w-full transition-all duration-700" />
@@ -113,7 +113,7 @@ const Footer = () => {
                                             <span className="p-3 bg-slate-50 rounded-2xl group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
                                                 {social.icon}
                                             </span>
-                                            {social.name}
+                                            <span className="text-[14px]">{social.name}</span>
                                             <ArrowUpRight size={18} className="opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
                                         </motion.a>
                                     </li>

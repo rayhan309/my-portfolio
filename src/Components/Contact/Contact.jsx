@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Send, User, Mail, MessageSquare, CheckCircle, ArrowRight } from "lucide-react";
+import { Send, User, Mail, MessageSquare, CheckCircle, ArrowRight, Phone } from "lucide-react";
 import { TextField, InputAdornment } from "@mui/material";
 
 if (typeof window !== "undefined") {
@@ -68,10 +68,10 @@ export default function ProfessionalContact() {
         {/* Left Side: Brand Identity */}
         <div ref={infoRef} className="space-y-12">
           <div className="overflow-hidden">
-            <h2 className="contact-title text-6xl md:text-8xl font-black tracking-tighter text-slate-900 uppercase italic leading-[0.85]">
+            <h2 className="contact-title text-4xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase italic leading-[0.85]">
               LET'S START <br />
-              <span className="text-transparent" style={{ WebkitTextStroke: "1px #0f172a" }}>A </span>
-              <span className="text-blue-600">PROJECT.</span>
+              <span className="text-transparent italic" style={{ WebkitTextStroke: "1px #2563eb" }}>A </span>
+              <span className="text-transparent italic" style={{ WebkitTextStroke: "1px #2563eb" }}>PROJECT.</span>
             </h2>
           </div>
 
@@ -87,6 +87,17 @@ export default function ProfessionalContact() {
               <div>
                 <p className="text-[10px] text-slate-400 uppercase tracking-[0.3em] font-black mb-1">Send an Email</p>
                 <p className="font-bold text-slate-900 text-xl lg:text-2xl italic tracking-tight">ihaveawonderfull@gmail.com</p>
+              </div>
+            </motion.div>
+
+
+            <motion.div whileHover={{ x: 10 }} className="info-item flex items-center gap-6 group">
+              <div className="w-16 h-16 rounded-[2rem] bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                <Phone size={28} />
+              </div>
+              <div>
+                <p className="text-[10px] text-slate-400 uppercase tracking-[0.3em] font-black mb-1">Call Me</p>
+                <p className="font-bold text-slate-900 text-xl lg:text-2xl italic tracking-tight">+880 1621-807642</p>
               </div>
             </motion.div>
           </div>

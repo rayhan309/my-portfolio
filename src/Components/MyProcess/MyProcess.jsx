@@ -48,7 +48,7 @@ const steps = [
 
 export default function MyProcess() {
   return (
-    <section className="py-24 px-6 lg:px-24 bg-[#fdfdfd] relative overflow-hidden">
+    <section className="py-24 px-6 bg-[#fdfdfd] relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-1/4 w-px h-full bg-slate-100 hidden lg:block" />
       <div className="absolute top-0 right-1/4 w-px h-full bg-slate-100 hidden lg:block" />
@@ -67,9 +67,12 @@ export default function MyProcess() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase italic"
+            className="text-4xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase "
           >
-            How I <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Work.</span>
+            How I {" "}
+            <span className="text-transparent italic" style={{ WebkitTextStroke: "1.5px #2563eb" }}>
+              Work.
+            </span>
           </motion.h2>
         </div>
 

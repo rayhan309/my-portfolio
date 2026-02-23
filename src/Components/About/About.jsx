@@ -1,20 +1,20 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, Rocket, Heart, Coffee, Terminal, Sparkles } from "lucide-react";
+import { Code2, Rocket, Heart, Coffee, Terminal, Sparkles, Award, ExternalLink } from "lucide-react";
 
 const milestones = [
   {
     year: "2025",
     title: "The Awakening",
-    desc: "২০২৫ সালে কোডিংয়ের অফুরন্ত সমুদ্রে আমার যাত্রা শুরু। প্রথম কোড যখন ব্রাউজারে সফলভাবে কাজ করলো, সেই মুহূর্তটাই আমার জীবনের মোড় ঘুরিয়ে দেয়।",
+    desc: "২০২৫ সালে কোডিংয়ের অফুরন্ত সমুদ্রে আমার যাত্রা শুরু। প্রথম কোড যখন ব্রাউজারে সফলভাবে কাজ করলো, সেই মুহূর্তটাই আমার জীবনের মোড় ঘুরিয়ে দেয়।",
     icon: <Terminal size={20} />,
     color: "blue",
   },
   {
     year: "Early 2026",
     title: "Full-Stack Evolution",
-    desc: "অদম্য কৌতূহল থেকে আমি React, Node.js এবং MongoDB-তে দক্ষতা অর্জন করি। ডেটাবেস থেকে ইন্টারফেস—সবকিছুই আমার নিয়ন্ত্রণে আসতে থাকে।",
+    desc: "অদম্য কৌতূহল থেকে আমি React, Node.js এবং MongoDB-তে দক্ষতা অর্জন করি। ডেটাবেস থেকে ইন্টারফেস—সবকিছুই আমার নিয়ন্ত্রণে আসতে থাকে।",
     icon: <Code2 size={20} />,
     color: "purple",
   },
@@ -25,6 +25,12 @@ const milestones = [
     icon: <Rocket size={20} />,
     color: "emerald",
   },
+];
+
+// আপনার সার্টিফিকেট ডাটা এখানে দিন
+const certifications = [
+  { title: "Full-Stack Development", org: "Programming Hero", link: "https://ik.imagekit.io/bqcbuhqkkg/programming_hero_Jax8arFOP.pdf" },
+  { title: "Cyber Security", org: "NCSA - GVM", link: "https://i.ibb.co.com/dJsYQwD6/image.png" },
 ];
 
 export default function AboutStory() {
@@ -51,7 +57,7 @@ export default function AboutStory() {
             className="text-4xl md:text-7xl font-black tracking-tighter text-slate-900 leading-none uppercase"
           >
             Beyond the <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 italic">
+            <span className="text-transparent italic" style={{ WebkitTextStroke: "1.5px #2563eb" }}>
               Pixels & Logic.
             </span>
           </motion.h3>
@@ -60,15 +66,15 @@ export default function AboutStory() {
         {/* --- Main Content Grid --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-          {/* Left Side: Bio Narrative (5 Columns) */}
-          <div className="lg:col-span-5 space-y-8">
+          {/* Left Side: Bio & Certificates (5 Columns) */}
+          <div className="lg:col-span-5 space-y-10">
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="text-xl md:text-2xl text-slate-500 leading-relaxed font-light"
             >
-              "কোডিং আমার কাছে শুধু কাজ নয়, এটি একটি <span className="text-slate-900 font-medium italic">ক্রাফটsmanship</span>—যেখানে প্রতিটা সেমিকোলন একটি বড় পরিবর্তনের অংশ।"
+              "কোডিং আমার কাছে শুধু কাজ নয়, এটি একটি <span className="text-slate-900 font-medium italic">ক্রাফটsmanship</span>—যেখানে প্রতিটা সেমিকোলন একটি বড় পরিবর্তনের অংশ।"
             </motion.p>
 
             <motion.div
@@ -82,7 +88,7 @@ export default function AboutStory() {
               </div>
               <h4 className="text-2xl font-bold mb-4 text-slate-900">আমি কে?</h4>
               <p className="text-slate-600 leading-relaxed text-lg">
-                আমি আবু রায়হান, একজন প্যাশনেট ফুল-স্ট্যাক ডেভেলপার। আমি জটিল টেকনিক্যাল সমস্যাগুলোকে সহজ এবং সুন্দর ডিজিটাল সমাধানে রূপান্তর করতে পছন্দ করি। যখন আমি কোড করি না, তখন আমাকে কফি মগ হাতে নতুন কোনো টেকনোলজি নিয়ে রিসার্চ করতে দেখা যায়।
+                আমি আবু রায়হান, একজন প্যাশনেট ফুল-স্ট্যাক ডেভেলপার। আমি জটিল টেকনিক্যাল সমস্যাগুলোকে সহজ এবং সুন্দর ডিজিটাল সমাধানে রূপান্তর করতে পছন্দ করি।
               </p>
 
               <div className="flex flex-wrap gap-3 mt-8">
@@ -94,12 +100,37 @@ export default function AboutStory() {
                 </span>
               </div>
             </motion.div>
+
+            {/* --- NEW: Certificates Section --- */}
+            <div className="pt-4">
+              <h5 className="text-slate-900 font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-2">
+                <Award size={16} className="text-blue-600" /> Certifications
+              </h5>
+              <div className="space-y-4">
+                {certifications.map((cert, idx) => (
+                  <motion.a
+                    key={idx}
+                    href={cert.link}
+                    target="_blank"
+                    whileHover={{ x: 5 }}
+                    className="flex items-center justify-between p-4 bg-slate-50/50 border border-slate-100 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 transition-all group"
+                  >
+                    <div>
+                      <h6 className="text-sm font-bold text-slate-900 leading-none mb-1 uppercase italic tracking-tight">
+                        {cert.title}
+                      </h6>
+                      <p className="text-[10px] text-slate-400 font-mono uppercase">{cert.org}</p>
+                    </div>
+                    <ExternalLink size={14} className="text-slate-300 group-hover:text-blue-600 transition-colors" />
+                  </motion.a>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Right Side: Modern Interactive Timeline (7 Columns) */}
+          {/* Right Side: Timeline (7 Columns) */}
           <div className="lg:col-span-7 pl-0 md:pl-10">
             <div className="space-y-12 relative">
-              {/* Timeline Line */}
               <div className="absolute left-6 top-0 w-[2px] h-full bg-slate-100 hidden md:block" />
 
               {milestones.map((item, index) => (
@@ -111,7 +142,6 @@ export default function AboutStory() {
                   transition={{ delay: index * 0.2 }}
                   className="relative flex flex-col md:flex-row gap-8 group"
                 >
-                  {/* Icon Node */}
                   <div className="w-12 h-12 shrink-0 rounded-2xl bg-white border-2 border-slate-50 shadow-lg flex items-center justify-center z-10 group-hover:scale-110 group-hover:border-blue-500 transition-all duration-500 text-slate-700 group-hover:text-blue-600">
                     {item.icon}
                   </div>

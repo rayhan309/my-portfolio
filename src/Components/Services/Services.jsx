@@ -146,8 +146,10 @@ export default function Services() {
             <Terminal size={18} className="text-blue-600" />
             <span className="text-blue-600 font-mono text-[10px] font-black uppercase tracking-[0.4em]">Expertise</span>
           </div>
-          <h2 className="text-5xl md:text-7xl lg:text-[8vw] font-black tracking-tighter text-slate-900 uppercase italic leading-[0.8]">
-            MY <span className="text-transparent" style={{ WebkitTextStroke: "1px #cbd5e1" }}>SERVICES.</span>
+          <h2 className="text-4xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase">
+            MY <span className="text-transparent italic" style={{ WebkitTextStroke: "1.5px #2563eb" }}>
+              SERVICES.
+            </span>
           </h2>
         </div>
 

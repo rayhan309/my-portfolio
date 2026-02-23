@@ -43,10 +43,13 @@ export default function Experience() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-8xl font-black tracking-tighter text-slate-900 leading-[0.8] uppercase"
+                        className="text-4xl md:text-7xl font-black tracking-tighter text-slate-900 leading-[0.8] uppercase"
                     >
                         Work <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Experience.</span>
+                        {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Experience.</span> */}
+                        <span className="text-transparent italic" style={{ WebkitTextStroke: "1.5px #2563eb" }}>
+                            Experience.
+                        </span>
                     </motion.h2>
                 </div>
 
