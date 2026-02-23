@@ -94,7 +94,7 @@ export default function MyProcess() {
                 </div>
               )}
 
-              <div className="h-full p-8 rounded-[2.5rem] bg-white border border-slate-100 hover:border-blue-200 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-900/5 group/card relative overflow-hidden">
+              <div className="h-full p-8 rounded-2xl bg-white border border-slate-100 hover:border-blue-200 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-900/5 group/card relative overflow-hidden">
 
                 {/* Step Number Background */}
                 <div className="absolute -top-4 -right-4 text-8xl font-black text-slate-50 opacity-[0.03] group-hover/card:opacity-[0.08] transition-opacity uppercase italic">
@@ -131,7 +131,7 @@ export default function MyProcess() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-20 p-8 rounded-[3rem] bg-slate-900 text-center relative overflow-hidden"
+          className="mt-20 p-8 rounded-2xl bg-slate-900 text-center relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent" />
           <p className="text-slate-400 font-mono text-xs tracking-[0.2em] uppercase mb-2 relative z-10 italic">

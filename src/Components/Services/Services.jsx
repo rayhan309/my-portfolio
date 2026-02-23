@@ -101,11 +101,11 @@ const ServiceCard = ({ service, index, onSelect }) => {
       <div
         ref={cardRef}
         onClick={() => onSelect(service)}
-        className="group relative h-full p-8 lg:p-12 rounded-[2.5rem] lg:rounded-[3.5rem] bg-white border border-slate-100 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:border-blue-100 flex flex-col justify-between"
+        className="group relative h-full p-8 lg:p-12 rounded-2xl bg-white border border-slate-100 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:border-blue-100 flex flex-col justify-between"
         style={{ transformStyle: "preserve-3d" }}
       >
         <div>
-          <div className={`mb-8 w-16 h-16 lg:w-20 lg:h-20 rounded-2xl lg:rounded-3xl ${service.bg} ${service.color} flex items-center justify-center transition-all duration-500 group-hover:bg-slate-900 group-hover:text-white`}>
+          <div className={`mb-8 w-16 h-16 lg:w-20 lg:h-20 rounded-2xl lg:rounded-3xl ${service.bg} ${service.color} flex items-center justify-center transition-all duration-500 group-hover:bg-blue-500 group-hover:text-white`}>
             {React.cloneElement(service.icon, { size: 32, strokeWidth: 2 })}
           </div>
           <h4 className="text-2xl lg:text-3xl font-black mb-4 tracking-tighter text-slate-900 uppercase italic leading-none group-hover:text-blue-600 transition-colors">
@@ -177,11 +177,11 @@ export default function Services() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 50 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl bg-white rounded-[2.5rem] lg:rounded-[4rem] p-8 lg:p-16 overflow-y-auto max-h-[90vh] shadow-2xl"
+              className="relative w-full max-w-4xl bg-white rounded-2xl p-8 lg:p-16 overflow-y-auto max-h-[90vh] shadow-2xl"
             >
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-6 right-6 lg:top-10 lg:right-10 w-12 h-12 flex items-center justify-center bg-slate-50 rounded-full hover:bg-red-50 hover:text-red-500 transition-all z-10 shadow-sm"
+                className="absolute top-6 right-6 lg:top-10 lg:right-10 w-12 h-12 flex items-center justify-center bg-slate-50 rounded-full cursor-pointer hover:bg-red-50 hover:text-red-500 transition-all z-10 shadow-sm"
               >
                 <X size={20} />
               </button>
@@ -213,7 +213,7 @@ export default function Services() {
                   <Link
                     href="#contact"
                     onClick={() => setSelectedService(null)}
-                    className="mt-10 w-full py-5 lg:py-7 bg-slate-900 text-white rounded-[1.5rem] lg:rounded-[2rem] font-black uppercase italic tracking-widest hover:bg-blue-600 transition-all flex items-center justify-center gap-3 group shadow-xl"
+                    className="mt-10 w-full py-5 lg:py-7 bg-slate-900 text-white rounded-[1rem]  font-black uppercase italic tracking-widest hover:bg-blue-600 transition-all flex items-center justify-center gap-3 group shadow-xl"
                   >
                     Let's Talk <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                   </Link>

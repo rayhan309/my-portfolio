@@ -81,7 +81,7 @@ export default function ProfessionalContact() {
 
           <div className="space-y-8">
             <motion.div whileHover={{ x: 10 }} className="info-item flex items-center gap-6 group">
-              <div className="w-16 h-16 rounded-[2rem] bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+              <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
                 <Mail size={28} />
               </div>
               <div>
@@ -92,7 +92,7 @@ export default function ProfessionalContact() {
 
 
             <motion.div whileHover={{ x: 10 }} className="info-item flex items-center gap-6 group">
-              <div className="w-16 h-16 rounded-[2rem] bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+              <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
                 <Phone size={28} />
               </div>
               <div>
@@ -108,7 +108,7 @@ export default function ProfessionalContact() {
           ref={formRef}
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="bg-white p-8 md:p-14 rounded-[3.5rem] border border-slate-100 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] relative"
+          className="bg-white p-8 md:p-14 rounded-2xl border border-slate-100 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] relative"
         >
           <AnimatePresence mode="wait">
             {isSubmitSuccessful ? (
@@ -119,7 +119,7 @@ export default function ProfessionalContact() {
                 exit={{ opacity: 0 }}
                 className="text-center py-12"
               >
-                <div className="w-24 h-24 bg-green-50 rounded-[2.5rem] flex items-center justify-center mx-auto mb-8">
+                <div className="w-24 h-24 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-8">
                   <CheckCircle size={48} className="text-green-500" />
                 </div>
                 <h3 className="text-4xl font-black text-slate-900 uppercase italic tracking-tighter">Awesome!</h3>
@@ -180,10 +180,10 @@ export default function ProfessionalContact() {
                 </div>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
+                  // whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   disabled={isSubmitting}
-                  className="w-full py-6 bg-slate-900 text-white rounded-[2rem] font-black uppercase italic tracking-[0.2em] flex items-center justify-center gap-4 group disabled:opacity-50 transition-all hover:bg-blue-600 shadow-2xl shadow-blue-900/20"
+                  className="w-full py-6 cursor-pointer bg-slate-900 text-white rounded-2xl font-black uppercase italic tracking-[0.2em] flex items-center justify-center gap-4 group disabled:opacity-50 transition-all hover:bg-blue-600 shadow-2xl shadow-blue-900/20"
                 >
                   {isSubmitting ? "Sending..." : "Submit Inquiry"}
                   <ArrowRight className="group-hover:translate-x-2 transition-transform" />

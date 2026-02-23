@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Linkedin, Github, Facebook, ArrowUpRight, Heart, Mail } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -70,7 +71,7 @@ const Footer = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="flex items-center gap-3 mb-6"
+                            className="flex items-center gap-3 "
                         >
                             <div className="h-px w-8 bg-blue-600" />
                             <h2 className="text-blue-600 font-mono text-xs uppercase tracking-[0.4em] font-black">
@@ -96,12 +97,13 @@ const Footer = () => {
                     {/* Right: Social Connections */}
                     <div className="flex flex-col gap-10 min-w-[240px]">
                         <div>
-                            <h3 className="text-slate-400 font-black mb-8 uppercase text-[10px] tracking-[0.3em] italic border-b border-slate-100 pb-2">Connect</h3>
+                            <h3 className="text-slate-400 font-black uppercase text-[10px] tracking-[0.3em] italic border-b border-slate-100 pb-2">Connect</h3>
                             <ul className="space-y-6">
                                 {[
                                     { name: "LinkedIn", icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/abu-rayhan-undefined-2514b5390/" },
                                     { name: "GitHub", icon: <Github size={20} />, url: "https://github.com/rayhan309" },
-                                    { name: "Facebook", icon: <Facebook size={20} />, url: "https://www.facebook.com/profile.php?id=100082830604559" }
+                                    { name: "Facebook", icon: <Facebook size={20} />, url: "https://www.facebook.com/profile.php?id=100082830604559" },
+                                    { name: "Whatsapp", icon: <FaWhatsapp size={20} />, url: "https://wa.me/8801621807642" }
                                 ].map((social) => (
                                     <li key={social.name}>
                                         <motion.a
