@@ -112,7 +112,7 @@ const Footer = () => {
                                             target="_blank"
                                             className="flex items-center gap-4 text-slate-900 hover:text-blue-600 transition-all group font-bold uppercase italic tracking-tighter text-xl"
                                         >
-                                            <span className="p-3 bg-slate-50 rounded-2xl group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                                            <span className="p-3 bg-slate-50 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
                                                 {social.icon}
                                             </span>
                                             <span className="text-[14px]">{social.name}</span>
